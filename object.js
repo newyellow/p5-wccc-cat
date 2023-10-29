@@ -8,7 +8,7 @@ class Cat {
 
         this.bodyCurve = easeInOutQuad;
         this.bodyType = int(random(0, 3));
-        this.bodyType = 0;
+        this.bodyType = int(random(0, 3));
         // 0: left, 1: right, 2: front
     }
 }

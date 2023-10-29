@@ -7,14 +7,18 @@ class RectData {
     }
 }
 
-let DIVIDE_CHANCE = 0.8;
-let MAX_DEPTH = 3;
+let DIVIDE_CHANCE = 0.9;
+let MAX_DEPTH = 6;
+let MIN_DEPTH = 3;
 
 function subdivideRect(_x, _y, _w, _h, _depth) {
     let isSplit = random() < DIVIDE_CHANCE;
 
     if (_depth >= MAX_DEPTH)
         isSplit = false;
+
+    if (_depth < MIN_DEPTH)
+        isSplit = true;
 
     if (isSplit) {
         let splitRatio = random(0.2, 0.8);
